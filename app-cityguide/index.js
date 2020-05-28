@@ -10,8 +10,6 @@ app.get("/", (req, res) => {
 app.get("/cityguide", (req, res) => {
     res.json("Welcome to Paris");
   });
-  
-
 
 app.listen(DEFAULT_PORT, () => {
     console.log(`Listening on PORT: ${DEFAULT_PORT}`);
