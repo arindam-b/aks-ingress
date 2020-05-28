@@ -1,14 +1,13 @@
-
 FROM node:alpine
 
 WORKDIR /app
 
 COPY package.json /app
 
-RUN npm install --production
+RUN npm install
 
 COPY . /app
 
 EXPOSE 3000
 
-CMD npm start
+CMD node index.js
