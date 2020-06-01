@@ -1,3 +1,18 @@
+Reference: https://docs.microsoft.com/en-us/azure/aks/ingress-basic
+
+# Login
+az login
+
+az account set -s 0ec1f351-d07c-4610-9699-90c9a990432b
+
+# Get cluster details
+
+az aks get-credentials --resource-group=aks-rg --name=my-aks
+
+# Kubernetes dashboard
+
+az aks browse --resource-group=aks-rg --name=my-aks
+
 # Create a namespace for your ingress resources
 kubectl apply -f namespace.yml
 
@@ -18,7 +33,7 @@ kubectl apply -f deploy-weatherapp.yml
 kubectl apply -f deploy-cityguideapp.yml
 
 # Create an ingress route
-kubectl apply -f ingress.yaml
+kubectl apply -f ingress.yml
 
 # Tear down
 helm list --namespace ingress-basic
