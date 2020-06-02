@@ -3,7 +3,7 @@ Reference: https://docs.microsoft.com/en-us/azure/aks/ingress-basic
 # Login
 az login
 
-az account set -s 0ec1f351-d07c-4610-9699-90c9a990432b
+az account set -s [subscriptionid]
 
 # Get cluster details
 
